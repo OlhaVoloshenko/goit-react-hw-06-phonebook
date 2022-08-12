@@ -1,13 +1,16 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
-//import { ThemeProvider } from '@emotion/react';
-import { App } from 'components/App/App';
-import './index.css';
-//import upcomingEvents from 'upcoming-events.json';
-//import { theme } from 'constans';
+import ReactDOM from 'react-dom';
+import { App } from 'components/App';
+import { store, persistor } from 'components/Rdx/store';
+import { Provider } from 'react-redux';
+import { PersistGate } from 'redux-persist/integration/react';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <App />
+    <Provider store={store}>
+      <PersistGate loading={null} persistor={persistor}>
+        <App />
+      </PersistGate>
+    </Provider>
   </React.StrictMode>
 );
