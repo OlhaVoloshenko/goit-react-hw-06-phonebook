@@ -1,11 +1,11 @@
 import { useSelector } from 'react-redux';
-//import { nanoid } from 'nanoid';
-import { InputForm } from 'InputForm';
-import { Filter } from 'Filter';
-import { ContactList } from 'ContactList';
-import { PhonebookBox } from 'Phonebook/Phonebook.styled';
-import { InputFormBox } from 'InputForm/InputForm.styled';
-import { ContactListBox } from 'ContactList/ContactList.styled';
+import { Title } from './App.styled';
+import { InputForm } from 'components/InputForm';
+import { Filter } from 'components/Filter';
+import { ContactList } from 'components/ContactList';
+import { PhonebookBox } from 'components/Phonebook/Phonebook.styled';
+import { InputFormBox } from 'components/InputForm/InputForm.styled';
+import { ContactListBox } from 'components/ContactList/ContactList.styled';
 
 export function App() {
   const contacts = useSelector(store => store.contacts.items);
@@ -19,12 +19,12 @@ export function App() {
   return (
     <PhonebookBox>
       <InputFormBox>
-        <h1 style={{ textAlign: 'center' }}>Phonebook</h1>
+        <Title>Phonebook</Title>
         <InputForm />
       </InputFormBox>
       <ContactListBox>
         <Filter />
-        <ContactList contacts={filteredContacts} /> :
+        <ContactList contacts={filteredContacts} />
       </ContactListBox>
     </PhonebookBox>
   );
