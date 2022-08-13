@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import { useSelector, useDispatch } from 'react-redux';
-import { addContact } from 'components/Rdx/contactCreateSlice';
+import { addContact } from 'Redux/contactCreateSlice';
 import { InputItem } from './InputForm.styled';
 import { nanoid } from 'nanoid';
 import { Formik, Form } from 'formik';

@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
-import { removeContact } from '../Rdx/contactCreateSlice';
+import { removeContact } from '../../Redux/contactCreateSlice';
 import {
   ListItem,
   NumByOrder,

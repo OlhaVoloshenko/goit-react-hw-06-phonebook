@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import { useDispatch, useSelector } from 'react-redux';
-import { changeFilter } from 'components/Rdx/contactCreateSlice';
+import { changeFilter } from 'Redux/contactCreateSlice';
 
 export const Filter = () => {
   const contactFilter = useSelector(store => store.contacts.filter);
