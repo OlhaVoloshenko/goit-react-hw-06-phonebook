@@ -8,11 +8,11 @@ import { InputFormBox } from 'components/InputForm/InputForm.styled';
 import { ContactListBox } from 'components/ContactList/ContactList.styled';
 
 export function App() {
-  const contacts = useSelector(store => store.contacts.items);
+  const name = useSelector(store => store.contacts.items);
   const contactsFilter = useSelector(store => store.contacts.filter);
 
   const normalizedFilter = contactsFilter.toLowerCase();
-  const filteredContacts = contacts.filter(contact =>
+  const filteredContacts = name.filter(contact =>
     contact.name.toLowerCase().includes(normalizedFilter)
   );
 
