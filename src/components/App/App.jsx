@@ -8,7 +8,7 @@ import { InputFormBox } from 'components/InputForm/InputForm.styled';
 import { ContactListBox } from 'components/ContactList/ContactList.styled';
 
 export function App() {
-  const name = useSelector(store => store.contacts.items);
+  const contacts = useSelector(store => store.contacts.items);
   /* const contactsFilter = useSelector(store => store.contacts.filter);
 
   const normalizedFilter = contactsFilter.toLowerCase();
@@ -24,7 +24,7 @@ export function App() {
       </InputFormBox>
       <ContactListBox>
         <Filter />
-        <ContactList contacts={name} />
+        <ContactList contacts={contacts} />
       </ContactListBox>
     </PhonebookBox>
   );
