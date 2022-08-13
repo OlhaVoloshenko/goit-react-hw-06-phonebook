@@ -7,16 +7,14 @@ import { PhonebookBox } from 'components/Phonebook/Phonebook.styled';
 import { InputFormBox } from 'components/InputForm/InputForm.styled';
 import { ContactListBox } from 'components/ContactList/ContactList.styled';
 
-/*export function App() {
+export function App() {
   const contacts = useSelector(store => store.contacts.items);
   const contactsFilter = useSelector(store => store.contacts.filter);
 
   const normalizedFilter = contactsFilter.toLowerCase();
   const filteredContacts = contacts.filter(contact =>
     contact.name.toLowerCase().includes(normalizedFilter)
-  );*/
-export const App = () => {
-  const contacts = useSelector(store => store.contacts.items);
+  );
 
   return (
     <PhonebookBox>
@@ -26,8 +24,8 @@ export const App = () => {
       </InputFormBox>
       <ContactListBox>
         <Filter />
-        <ContactList contacts={contacts} />
+        <ContactList contacts={filteredContacts} />
       </ContactListBox>
     </PhonebookBox>
   );
-};
+}
