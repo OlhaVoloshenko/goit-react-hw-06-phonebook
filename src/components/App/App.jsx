@@ -7,7 +7,7 @@ import { PhonebookBox } from 'components/Phonebook/Phonebook.styled';
 import { InputFormBox } from 'components/InputForm/InputForm.styled';
 import { ContactListBox } from 'components/ContactList/ContactList.styled';
 
-export const App = ({ contacts }) => {
+export const App = () => {
   //const contacts = useSelector(store => store.contacts.items);
   /* const contactsFilter = useSelector(store => store.contacts.filter);
 
@@ -24,7 +24,7 @@ export const App = ({ contacts }) => {
       </InputFormBox>
       <ContactListBox>
         <Filter />
-        <ContactList contacts={contacts} />
+        <ContactList />
       </ContactListBox>
     </PhonebookBox>
   );
