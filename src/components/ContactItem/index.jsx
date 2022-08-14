@@ -3,7 +3,7 @@ import { useDispatch } from 'react-redux';
 import { removeContact } from '../../Redux/contactCreateSlice';
 import { ListItem, TelNum, DelBtn } from '../ContactList/ContactList.styled';
 
-export function ContactItem({ name, number, id, item }) {
+export function ContactItem({ name, number, id }) {
   const dispatch = useDispatch();
   return (
     <ListItem>
