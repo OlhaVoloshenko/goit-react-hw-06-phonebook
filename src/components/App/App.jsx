@@ -1,4 +1,4 @@
-import { useSelector } from 'react-redux';
+//import { useSelector } from 'react-redux';
 import { Title } from './App.styled';
 import { InputForm } from 'components/InputForm';
 import { Filter } from 'components/Filter';
@@ -7,8 +7,8 @@ import { PhonebookBox } from 'components/Phonebook/Phonebook.styled';
 import { InputFormBox } from 'components/InputForm/InputForm.styled';
 import { ContactListBox } from 'components/ContactList/ContactList.styled';
 
-export function App() {
-  const contacts = useSelector(store => store.contacts.items);
+export const App = ({ contacts }) => {
+  //const contacts = useSelector(store => store.contacts.items);
   /* const contactsFilter = useSelector(store => store.contacts.filter);
 
   const normalizedFilter = contactsFilter.toLowerCase();
@@ -28,4 +28,4 @@ export function App() {
       </ContactListBox>
     </PhonebookBox>
   );
-}
+};

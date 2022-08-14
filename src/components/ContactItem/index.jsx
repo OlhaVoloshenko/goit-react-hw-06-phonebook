@@ -8,13 +8,12 @@ import {
   DelBtn,
 } from '../ContactList/ContactList.styled';
 
-export function ContactItem({ contact, item }) {
+export function ContactItem({ name, number, id, item }) {
   const dispatch = useDispatch();
   return (
     <ListItem>
-      <NumByOrder>{item + 1}</NumByOrder>
-      {contact.name}: <TelNum>{contact.number}</TelNum>
-      <DelBtn type="button" onClick={() => dispatch(removeContact(contact.id))}>
+      {name}: <TelNum>{number}</TelNum>
+      <DelBtn type="button" onClick={() => dispatch(removeContact(id))}>
         Delete
       </DelBtn>
     </ListItem>
